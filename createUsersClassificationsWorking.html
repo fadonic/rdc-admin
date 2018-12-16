@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link  rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+  <link rel="stylesheet" href="assets/css/app.css" type="text/css">
+ 
+
+ <title>RDC-ADMIN</title>
+</head>
+<body>
+
+<div class="page-loader">
+  <header id="header">
+  <div class="logo">
+  <ul>
+  <li><a id="drop-down-mini" class="actions-item  zmdi zmdi-menu"></a></li>
+  <li>RDC ADMIN</li>
+  </ul>
+  </div>
+
+  <div class="top-nav">
+  <ul>
+  <li> <i class="zmdi zmdi-flower-alt"></i></li>
+  <li> <i class="zmdi zmdi-palette"></i></li>
+  <li> <i class="zmdi zmdi-apps"></i></li>
+  <li> <i class="zmdi zmdi-notifications"></i></li>
+  <li> <i class="zmdi zmdi-more-vert"></i></li>
+  </ul>
+  </div>
+  <div id="live-time" class="clock">
+  </div>
+  </header>
+
+  <div id="main-wrapper">
+
+  <aside class="sidebar" id="sidebar">
+  <ul class="navigation">
+  <li><a><i class="zmdi zmdi-flower-alt"></i>Dashboard<a></li>
+  <li><a><i class="zmdi zmdi-apps"></i>Stakeholders<a></li>
+  <li class="navigation-sub" id="drop-down-event">
+  <a><i class="zmdi zmdi-notifications"></i>Users Management<a>
+  <ul id="drop-down" class="dropdown-content">
+  <li><a>Create User Classifications</a></li>
+  <li><a>View Users Classifications</a></li>
+  <li><a>Create system Users</a></li>
+  <li><a>View System Users</a></li>
+  </ul>
+  </li>
+  <li><a><i class="zmdi zmdi-palette"></i>Users Monitor<a></li>
+  <li><a><i class="zmdi zmdi-notifications"></i>Invoice Management<a></li>
+  <li><a><i class="zmdi zmdi-apps"></i>VAT Management Services<a></li>
+  <li><a><i class="zmdi zmdi-palette"></i>Transporter Service<a></li>
+  <li><a><i class="zmdi zmdi-palette"></i>All Settings<a></li>
+  <li><a><i class="zmdi zmdi-notifications"></i>Logout<a></li>
+  <li><a><i class="zmdi zmdi-apps"></i>Rtn generator<a></li>
+  <li><a><i class="zmdi zmdi-apps"></i>Stakeholders<a></li>
+  <li><a><i class="zmdi zmdi-notifications"></i>Users Settings<a></li>
+  
+  </ul>
+  </aside>
+   <div class="main-content">
+   <header class="content-title">
+   <h1>Create Users Classifications</h1>
+   <div class="actions">
+   <a class="actions-item zmdi zmdi-trending-up"></a>
+   <a class="actions-item zmdi zmdi-trending-up"></a>
+   <a class="actions-item zmdi zmdi-more-vert"></a>
+   </div>
+   </header>
+ 
+   <section>
+                
+                 
+    <div class="card override">
+    <div class="card-body">
+                             
+                      
+                              <div class="row">
+                               <div class="col-md-6">
+
+                              <div class="form-group">
+                              <input type="text"  class="form-control form-control-lg" placeholder="Classification Name" />
+                              </div>
+
+                              </div>
+
+                              <div class="col-md-6">
+
+                              <div class="form-group">
+                              <input type="text"  class="form-control form-control-lg" placeholder="Description" />
+                              </div>
+
+                              </div>
+
+                              <br><br><br><br><br>
+                              <hr>
+
+
+                            <div class="col-md-4">
+
+                             <select id="select-ml" multiple>
+                             <option>Create Stakeholders1</option>
+                             <option>Create Stakeholders2</option>
+                             <option>Create Stakeholders3</option>
+                             <option>Create Stakeholders4</option>
+                             </select>
+                            
+
+                            </div>
+
+                            <div class="col-md-3">
+
+                             
+                             <button id="btn-add-role">Add Roles</button>
+                             <button id="btn-remove-role">Remove Roles</button>
+
+
+                            </div>
+
+                            <div class="col-md-5">
+
+                             <select id="select-ms" multiple>
+                             
+                             </select>
+                             
+
+                            </div>
+              
+                              <div class="col-md-12 text-right">
+
+                              <div class="form-group">
+                              <button class="btn btn-light">Add New</button>
+                              <button class="btn btn-light">Reset</button>
+                              </div>
+
+                              </div>
+                              
+
+
+
+                              </div>
+
+                              
+                              </div>
+                              </div>
+                              
+
+
+                    </section>
+                   
+
+            
+   </div>
+                   
+
+  </div>
+
+ 
+</div>
+
+<script src="app.js"></script>
+<script>
+     const selectedRoles = document.getElementById('select-ml');
+     const addedRoles = document.getElementById('select-ms');
+     const btnAddRole = document.getElementById("btn-add-role");
+     const btnRemoveRole = document.getElementById("btn-remove-role");
+            
+            let roles = [];
+            let newRoles = []; 
+            let selectedOptions ;
+            let options = [] ;
+             
+            
+            btnAddRole.addEventListener("click", function(){
+              getSelectedValues(selectedRoles);
+            });
+            
+            btnRemoveRole.addEventListener("click", function(){
+              removeRoles();
+            });
+            
+            
+            function getSelectedValues(select) {
+              options = select && select.options;
+              for (var i=0; i<options.length; i++) {
+                if (options[i].selected) {
+                  roles.push(options[i].value || options[i].text);
+                  break;
+                }
+              }
+              dispayRoles();
+             }
+            
+             function dispayRoles(){
+             
+               newRoles = roles.map(function(item){
+                  return "<option>" + item + "</option>";
+               })
+               addedRoles.innerHTML = newRoles; 
+               
+             }
+            
+             function removeRoles(){ 
+               
+              addedRoles.remove(addedRoles.selectedIndex);
+               
+             	 roles=[];  
+               options = addedRoles.options;
+              for (i = 0; i < options.length; i++) { 
+	    						roles.push(options[i].value || options[i].text);
+								}
+             
+             }
+/*
+
+const selectedRoles = document.getElementById('select-ml');
+const addedRoles = document.getElementById('select-ms');
+const btnAddRole = document.getElementById("btn-add-role");
+const btnRemoveRole = document.getElementById("btn-remove-role");
+
+var roles = [];
+let newRoles = []; 
+let selectedOptions ;
+let options = [] ;
+ 
+
+btnAddRole.addEventListener("click", function(){
+  getSelectedValues(selectedRoles);
+});
+
+btnRemoveRole.addEventListener("click", function(){
+  removeRoles();
+});
+
+
+function getSelectedValues(select) {
+  options = select && select.options;
+  for (let i=0; i<options.length; i++) {
+    if (options[i].selected) {
+      roles.push(options[i].value || options[i].text);
+    }
+  }
+  dispayRoles();
+ }
+
+ function dispayRoles(){
+   newRoles = roles.map(function(item){
+      return "<option>" + item + "</option>";
+   })
+   addedRoles.innerHTML = newRoles; 
+   console.log(newRoles);
+ }
+
+ function removeRoles(){
+   console.log(addedRoles.selectedIndex);
+   console.log(newRoles.splice(addedRoles.selectedIndex,addedRoles.selectedIndex+1)); 
+   addedRoles.remove(addedRoles.selectedIndex);
+   console.log(newRoles); 
+ }*/
+
+ /*function removeRoles(){
+   console.log(addedRoles.selectedIndex);
+    addedRoles.remove(addedRoles.selectedIndex); 
+    
+ }*/
+
+
+ /*function dispayRoles(roles) {
+        if (value.length == 0) document.getElementById("addedRoles").innerHTML = "<option></option>";
+        else {
+            var catOptions = "";
+            for (categoryId in mealsByCategory[value]) {
+                catOptions += "<option>" + mealsByCategory[value][categoryId] + "</option>";
+            }
+            document.getElementById("category").innerHTML = catOptions;
+        }
+    }*/
+
+
+
+//dispayRoles();
+
+/*function dispayRoles(){
+   for (let i=0; i<roles.length; i++){
+    const opt = roles[i];
+    const el = document.createElement("option");
+    el.text = opt;
+    //alert(newRoles[0]);
+    //el.value = opt;
+    addedRoles.add(el);
+    
+   }
+ }*/
+
+
+
+
+</script>  
+</body>
+</html>  

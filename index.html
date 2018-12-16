@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RDC ADMIN</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+    </head>
+    <body>
+        <div style="height: 100vh;">
+        <div style="background:#000; padding:2px"></div>  
+            <div class="login-page">
+                <div class="logo">
+                <img src="assets/images/firs.logo.png"/>
+                </div>
+                <div class="form">
+                    <form class="login-form" action="dashboard.html" autocomplete="off">
+                        <input type="text" placeholder="username" required="required"/>
+                        <input type="text" id="pwd-id" placeholder="password" required="required"/>
+                        <button>login</button>
+                        <p class="message"></p>
+                    </form>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="content">
+                   <div class="flogo">
+                   <img src="assets/images/rdcLogoDesign.png"/>
+                   </div>
+
+                    <div class="fslide">
+                     <h3>administrative management portal</h3>
+                     <p>C 2018</p>
+                    </div> 
+                    
+                </div>
+
+            </div>
+        </div>
+        <script src="assets/js/jquery-3.3.1.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                setTimeout(function () {
+                    $("#fade-in").fadeIn(8000);
+                    $("#btn").animate({right: '320px'}, "slow");
+                }, 1000);
+
+            });
+
+            const pwdId = document.getElementById("pwd-id");
+            pwdId.addEventListener("focus", changeText);
+
+            function changeText(){
+               pwdId.setAttribute("type", "password")
+            }
+            
+            
+        </script>
+
+    </body>
+</html>
