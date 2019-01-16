@@ -13,7 +13,7 @@ function startTime() {
   // add a zero in front of numbers<10
   m = checkTime(m);
   s = checkTime(s);
-  document.getElementById('live-time').innerHTML = h + ":" + m + ":" + s;
+  document.getElementById('live-time').innerHTML = today.toDateString().toUpperCase() + " " + h + ":" + m + ":" + s;
   t = setTimeout(function () {
     startTime()
   }, 500);
@@ -41,15 +41,13 @@ function toggleDropMini(e) {
 addEventListeners();
 
 
-
-
-
 var modal = document.getElementById('modalbox');
 var btn = document.getElementById('btn');
 var btnClose = document.getElementById('btnClose');
 
 
 var modalParam, btnParam, btnCloseParam;
+
 function showModel(modalParam, btnParam, btnCloseParam){
 
 btnParam.onclick = function () {
@@ -67,4 +65,42 @@ window.onclick = function (event) {
   }
 }
 }
+
+
+
+
+var editModal = document.getElementById("edit-modalbox");
+var editBtn = document.querySelectorAll(".btn-success");
+var editBtnClose = document.getElementById('edit-btnClose');
+
+var editModalParam, editBtnParam, editBtnCloseParam;
+
+function showEditModel(editModalParam, editBtnParam, editBtnCloseParam){
+
+editBtnParam.onclick = function (e) {
+  editModalParam.style.display = "block";
+  console.log(e.target.getAttribute("data"));
+  const dataId = e.target.getAttribute("data");
+  document.getElementById("dataId").innerHTML = "Id: " + dataId;
+}
+
+editBtnCloseParam.onclick = function () {
+  editModalParam.style.display = "none";
+}
+
+// window.onclick = function (event) {
+//   if (event.target == editModalParam) {
+//     editModalParam.style.display = 'none';
+//     console.log(event.target);
+//   }
+// }
+}
 showModel(modal, btn, btnClose);
+
+editBtn.forEach(function (btn) {
+  showEditModel(editModal, btn, editBtnClose);
+})
+
+
+
+ 

@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link  rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+  <link rel="stylesheet" href="assets/css/app.css" type="text/css">
+ 
+
+ <title>RDC-ADMIN</title>
+</head>
+<body>
+
+<div class="page-loader">
+  <header id="header">
+  <div class="logo">
+  <ul>
+  <li><a id="drop-down-mini" class="actions-item  zmdi zmdi-menu"></a></li>
+  <li>RDC ADMIN</li>
+  </ul>
+  </div>
+
+  <div class="top-nav">
+  <!--<ul>
+  <li> <i class="zmdi zmdi-flower-alt"></i></li>
+  <li> <i class="zmdi zmdi-palette"></i></li>
+  <li> <i class="zmdi zmdi-apps"></i></li>
+  <li> <i class="zmdi zmdi-notifications"></i></li>
+  <li> <i class="zmdi zmdi-more-vert"></i></li>
+  </ul>-->
+  </div>
+  <div id="live-time" class="clock">
+  </div>
+  </header>
+
+  <div id="main-wrapper">
+
+    <aside class="sidebar" id="sidebar">
+  <ul class="navigation">
+  <li class="logo">
+  <img src="assets/images/firs.logo.png"/>
+  </li>
+  <li><a><i class="zmdi zmdi-flower-alt"></i>Dashboard<a></li>
+  <li><a><i class="zmdi zmdi-apps"></i>Stakeholders<a></li>
+
+  <li class="navigation-sub" id="drop-down-event">
+  <a><i class="zmdi zmdi-notifications"></i>View System Users<a>
+  <ul id="drop-down" class="dropdown-content">
+  <li><a>Profile details</a></li>
+  <li><a>Logs</a></li>
+  <li><a>Mini Navigation</a></li>
+  <li><a>View System Users</a></li>
+  </ul>
+  </li>
+
+  <li class="navigation-sub" id="drop-down-event">
+  <a><i class="zmdi zmdi-notifications"></i>Users Management<a>
+  <ul id="drop-down" class="dropdown-content">
+  <li><a>Create User Classifications</a></li>
+  <li><a>View Users Classifications</a></li>
+  <li><a>Create system Users</a></li>
+  <li><a>View System Users</a></li>
+  </ul>
+  </li>
+
+  <li class="navigation-sub" id="drop-down-event">
+  <a><i class="zmdi zmdi-notifications"></i>All System Users<a>
+  <ul id="drop-down" class="dropdown-content">
+  <li><a>View Users</a></li>
+  <li><a>View Logs</a></li>
+  <li><a>Searh Users</a></li>
+  <li><a>Mini Navigation</a></li>
+  </ul>
+  </li>
+
+  <li class="navigation-sub" id="drop-down-event">
+  <a><i class="zmdi zmdi-notifications"></i>All Stakeholders<a>
+  <ul id="drop-down" class="dropdown-content">
+  <li><a>View Stakeholders</a></li>
+  <li><a>View Stakeholders Locations</a></li>
+  <li><a>Searh Users</a></li>
+  <li><a>Mini Navigation</a></li>
+  </ul>
+  </li>
+  
+
+  <li><a><i class="zmdi zmdi-notifications"></i>Invoice Management<a></li>
+  <li><a><i class="zmdi zmdi-apps"></i>VAT Management Setting<a></li>
+  <li><a><i class="zmdi zmdi-palette"></i>Transporter Service<a></li>
+  <li><a><i class="zmdi zmdi-palette"></i>All Settings<a></li>
+  <li><a><i class="zmdi zmdi-notifications"></i>Logout<a></li>
+  <li><a><i class="zmdi zmdi-apps"></i>Rtn generator<a></li>
+  <li><a><i class="zmdi zmdi-apps"></i>Stakeholders<a></li>
+  <li><a><i class="zmdi zmdi-notifications"></i>Users Settings<a></li>
+  
+  </ul>
+  </aside>
+
+   <div class="main-content">
+   <header class="content-title">
+   <h1>All Invoices Format</h1>
+   </header>
+ 
+ <style type="text/css">
+   .invoice-list table, .invoice-list table th, .invoice-list table td{
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,0.05);
+    text-transform: uppercase;
+    font-weight: 200;
+    color: rgb(255,255,255, 0.9);
+   }
+
+   .invoice-list table>tbody>tr>td{
+    padding:5px 10px;
+    text-transform: capitalize;
+   }
+
+
+ </style>
+   <section>
+
+     <div class="row">
+     <div class="col-sm-11">
+      <div style="background-color:#ce5844; padding: 10px">
+        List of Created Invoice Formats
+      </div>
+      <div class="card override-light invoice-list" style="background-color: rgba(0, 0, 0, .2); ">
+     <table>
+      <thead>
+       <tr>
+        <th>#</th>
+        <th>Element name1</th>
+        <th>Element Type</th>
+        <th>Value Type</th>
+        <th>Database Location</th>
+        <th>Table Location</th>
+        <th>Column Location</th>
+       </tr>
+       </thead>
+       <tbody>
+         
+          <tr>
+          <td>1</td>
+          <td>Vat Amount</td>
+          <td>Line Item</td>
+          <td>Money</td>
+          <td>Database Location</td>
+          <td>7847,9994</td>
+          <td>#8788</td>
+          <td><a href="#" class="btn btn-success" data="1">Edit</a></td>
+          <td><a href="#" class="btn btn-light">Delete</a></td>
+         </tr>
+          <tr>
+          <td>1</td>
+          <td>Vat Amount</td>
+          <td>Line Item</td>
+          <td>Money</td>
+          <td>Database Location</td>
+          <td>7847,9994</td>
+          <td>#8788</td>
+          <td><a href="#" class="btn btn-success" data="2">Edit</a></td>
+          <td><a href="#" class="btn btn-light">Delete</a></td>
+         </tr>
+
+         <tr>
+          <td>1</td>
+          <td>Vat Amount</td>
+          <td>Line Item</td>
+          <td>Money</td>
+          <td>Database Location</td>
+          <td>7847,9994</td>
+          <td>#8788</td>
+          <td><a href="#" class="btn btn-success" data="3">Edit</a></td>
+          <td><a href="#" class="btn btn-light">Delete</a></td>
+         </tr>
+          
+          
+         
+
+       </tbody>
+     </table> 
+     
+
+     </div>
+
+     <div class="text-left">
+        <a href="#" class="btn btn-light" id="btn">Add New Invoice</a>
+      </div>
+
+     </div>
+     </div>
+
+    </section>
+    
+
+  <section>
+     <div class="row">
+        <div id="modalbox" class="modal" style="height: 100vh; overflow-y: auto;">
+              <div class="modal-content" style="width: 80%;">
+              <div class="modal-header">
+              <h5 class="modal-title" style="padding: 5px">Create Invoice Format</h5>
+              <span class="modal-close" id="btnClose">&times;</span>
+          </div>
+                                    
+    <div class="modal-body" id="analysis-table">
+
+    <div class="card override" style="background-color: rgba(0, 0, 0, .9);">
+    
+    <form style="padding: 20px">
+    
+
+    <div class="row mb-20">
+     
+    <div class="col-sm-6">
+     <input type="text"  class="form-control form-control-lg" placeholder="Order of InvoiceItem" />
+    </div>
+
+    <div class="col-sm-6">
+     <input type="text"  class="form-control form-control-lg" placeholder="Order of RtnItem" />
+    </div>
+
+   </div>
+    <h1>Add Multiple Records</h1>
+    <br>
+     <div class="row mb-20">
+     
+    <div class="col-sm-4">
+     <input type="text"  class="form-control form-control-lg" placeholder="Element Name" />
+    </div>
+
+    <div class="col-sm-4">
+      <div class="custom-select form-control form-control-lg">
+      <select>
+        <option>Element Type</option>
+        <option value="Line Item">Line Item</option>
+        <option value="Client information">Client information</option>
+        <option value="Others">Others</option>
+      </select>
+    </div>
+    </div>
+
+
+    <div class="col-sm-4">
+      <div class="custom-select form-control form-control-lg">
+      <select>
+        <option  value="">Value Type</option>
+        <option  value="Money">Money</option>
+        <option  value="Female">Name</option>
+        <option  value="Male">Email</option>
+        <option  value="Male">Phone</option>
+        <option  value="Male">Invoice Number</option>
+      </select>
+    </div>
+    </div>
+   </div>
+     
+    <div class="row mb-20">
+
+    <div class="col-sm-4">
+      <input type="text"  class="form-control form-control-lg" placeholder="Database Location" />
+    </div>
+
+    <div class="col-sm-4">
+      <input type="text"  class="form-control form-control-lg" placeholder="Table Location" />
+    </div>
+
+    <div class="col-sm-4">
+      <input type="text"  class="form-control form-control-lg" placeholder="Column Location" />
+    </div>
+    </div>
+
+    <div class="row">
+     <div class="col-sm-12 text-right">
+      <button class="btn btn-light">Add New</button>
+     </div>
+    </div>
+    
+    <style type="text/css">
+      .lineItems table, .lineItems th, .lineItems td{
+         border: 1px solid rgba(255, 255, 255, 0.1);
+         color: rgba(255, 255, 255, 0.5);
+         padding: 5px;
+
+      }
+    </style>
+     
+    <br>
+    <h1>List of Multiple Records (20)</h1>
+     <br>
+     <div class="row mb-20">
+     <div class="col-sm-12 lineItems">
+      <table>
+        <thead>
+          <tr>
+            <th>Element Name</th>
+            <th>Element type</th>
+            <th>Value Type</th>
+            <th>Database Location</th>
+            <th>Table Location</th>
+            <th>Column Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Value 1</td>
+            <td>Value 1</td>
+            <td>Value 1</td>
+            <td>Value 1</td>
+            <td>Value 1</td>
+            <td>Value 1</td>
+            <td><span class="btn-close">&times;</span></td>
+          </tr>
+           <tr>
+            <td>Value 1</td>
+            <td>Value 1</td>
+            <td>Value 1</td>
+            <td>Value 1</td>
+            <td>Value 1</td>
+            <td>Value 1</td>
+            <td><span class="btn-close">&times;</span></td>
+          </tr>
+          
+        </tbody>
+      </table>
+     </div>
+     </div>
+
+     
+     <div class="row">
+     <div class="col-sm-12">
+      <button class="btn btn-light">Create Invoice Format</button>
+      <button class="btn btn-light" type="Reset">Reset</button>
+     </div>
+     </div>
+
+    
+    </form>
+
+      </div>
+
+      </div>
+
+
+    </div>
+</div>   
+                                    
+ 
+</div>
+
+</section>
+
+
+
+<section>
+     <div class="row">
+        <div id="edit-modalbox" class="modal">
+              <div class="modal-content">
+              <div class="modal-header">
+              <h5 class="modal-title" style="padding: 5px">
+                Edit Invoice Format 
+                <span id="dataId"></span>
+              </h5>
+              <span class="modal-close" id="edit-btnClose">&times;</span>
+          </div>
+                                    
+    <div class="modal-body" id="analysis-table">
+
+    <div class="card override" style="background-color: rgba(0, 0, 0, .9);">
+    
+    <form style="padding: 20px">
+    
+
+     <div class="row mb-20">
+     
+    <div class="col-sm-4">
+     <input type="text"  class="form-control form-control-lg" placeholder="Element Name" />
+    </div>
+
+    <div class="col-sm-4">
+      <div class="custom-select form-control form-control-lg">
+      <select>
+        <option>Element Type</option>
+        <option value="Line Item">Line Item</option>
+        <option value="Client information">Client information</option>
+        <option value="Others">Others</option>
+      </select>
+    </div>
+    </div>
+
+
+    <div class="col-sm-4">
+      <div class="custom-select form-control form-control-lg">
+      <select>
+        <option  value="">Value Type</option>
+        <option  value="Money">Money</option>
+        <option  value="Female">Name</option>
+        <option  value="Male">Email</option>
+        <option  value="Male">Phone</option>
+        <option  value="Male">Invoice Number</option>
+      </select>
+    </div>
+    </div>
+   </div>
+     
+    <div class="row mb-20">
+
+    <div class="col-sm-4">
+      <input type="text"  class="form-control form-control-lg" placeholder="Database Location" />
+    </div>
+
+    <div class="col-sm-4">
+      <input type="text"  class="form-control form-control-lg" placeholder="Table Location" />
+    </div>
+
+    <div class="col-sm-4">
+      <input type="text"  class="form-control form-control-lg" placeholder="Column Location" />
+    </div>
+
+     </div>
+     
+
+     <div class="row">
+     <div class="col-sm-12">
+      <button class="btn btn-light">Update Invoice Format</button>
+      <button class="btn btn-light" type="Reset">Reset</button>
+     </div>
+     </div>
+
+    
+    </form>
+
+      </div>
+
+      </div>
+
+
+    </div>
+</div>   
+                                    
+ 
+</div>
+
+</section>
+
+<hr>  
+    <div class="footer">
+      <ul>
+        <li class="footer-logo">
+         <img src="assets/images/rdcLogoDesign.png"/>
+        </li>
+        <li>Designed by RDC |</li> 
+        <li>© 2018</li>
+      </ul>
+    </div> 
+
+            
+   </div>
+                   
+
+  </div>
+
+ 
+</div>
+<script src="app.js"></script> 
+<script type="text/javascript">
+  
+var x, i, j, selElmnt, a, b, c;
+x = document.getElementsByClassName("custom-select");
+for (i = 0; i < x.length; i++) {
+  selElmnt = x[i].getElementsByTagName("select")[0];
+  /* For each element, create a new DIV that will act as the selected item: */
+  a = document.createElement("DIV");
+  a.setAttribute("class", "select-selected");
+  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+  x[i].appendChild(a);
+  /* For each element, create a new DIV that will contain the option list: */
+  b = document.createElement("DIV");
+  b.setAttribute("class", "select-items select-hide");
+  for (j = 1; j < selElmnt.length; j++) {
+    /* For each option in the original select element,
+    create a new DIV that will act as an option item: */
+    c = document.createElement("DIV");
+    c.innerHTML = selElmnt.options[j].innerHTML;
+    c.addEventListener("click", function(e) {
+        /* When an item is clicked, update the original select box,
+        and the selected item: */
+        var y, i, k, s, h;
+        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+        h = this.parentNode.previousSibling;
+        for (i = 0; i < s.length; i++) {
+          if (s.options[i].innerHTML == this.innerHTML) {
+            s.selectedIndex = i;
+            h.innerHTML = this.innerHTML;
+            y = this.parentNode.getElementsByClassName("same-as-selected");
+            for (k = 0; k < y.length; k++) {
+              y[k].removeAttribute("class");
+            }
+            this.setAttribute("class", "same-as-selected");
+            break;
+          }
+        }
+        h.click();
+    });
+    b.appendChild(c);
+  }
+  x[i].appendChild(b);
+  a.addEventListener("click", function(e) {
+    /* When the select box is clicked, close any other select boxes,
+    and open/close the current select box: */
+    e.stopPropagation();
+    closeAllSelect(this);
+    this.nextSibling.classList.toggle("select-hide");
+    this.classList.toggle("select-arrow-active");
+  });
+}
+
+function closeAllSelect(elmnt) {
+  /* A function that will close all select boxes in the document,
+  except the current select box: */
+  var x, y, i, arrNo = [];
+  x = document.getElementsByClassName("select-items");
+  y = document.getElementsByClassName("select-selected");
+  for (i = 0; i < y.length; i++) {
+    if (elmnt == y[i]) {
+      arrNo.push(i)
+    } else {
+      y[i].classList.remove("select-arrow-active");
+    }
+  }
+  for (i = 0; i < x.length; i++) {
+    if (arrNo.indexOf(i)) {
+      x[i].classList.add("select-hide");
+    }
+  }
+}
+
+
+/* If the user clicks anywhere outside the select box,
+then close all select boxes: */
+document.addEventListener("click", closeAllSelect);
+
+
+// const row = document.querySelectorAll(".btn-close");
+// console.log(row);
+// for(var i=0; i<row.length; i++){
+// row[i].addEventListener("click", removeRow);
+// }
+
+document.body.addEventListener("click", removeRow);
+ 
+function removeRow(e){
+if(e.target.classList.contains("btn-close")){
+e.target.parentElement.parentElement.remove();
+}
+
+}
+
+
+
+</script>
+</body>
+</html>  

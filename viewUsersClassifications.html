@@ -39,10 +39,24 @@
 
   <div id="main-wrapper">
 
-  <aside class="sidebar" id="sidebar">
+    <aside class="sidebar" id="sidebar">
   <ul class="navigation">
+  <li class="logo">
+  <img src="assets/images/firs.logo.png"/>
+  </li>
   <li><a><i class="zmdi zmdi-flower-alt"></i>Dashboard<a></li>
   <li><a><i class="zmdi zmdi-apps"></i>Stakeholders<a></li>
+
+  <li class="navigation-sub" id="drop-down-event">
+  <a><i class="zmdi zmdi-notifications"></i>View System Users<a>
+  <ul id="drop-down" class="dropdown-content">
+  <li><a>Profile details</a></li>
+  <li><a>Logs</a></li>
+  <li><a>Mini Navigation</a></li>
+  <li><a>View System Users</a></li>
+  </ul>
+  </li>
+
   <li class="navigation-sub" id="drop-down-event">
   <a><i class="zmdi zmdi-notifications"></i>Users Management<a>
   <ul id="drop-down" class="dropdown-content">
@@ -52,9 +66,30 @@
   <li><a>View System Users</a></li>
   </ul>
   </li>
-  <li><a><i class="zmdi zmdi-palette"></i>Users Monitor<a></li>
+
+  <li class="navigation-sub" id="drop-down-event">
+  <a><i class="zmdi zmdi-notifications"></i>All System Users<a>
+  <ul id="drop-down" class="dropdown-content">
+  <li><a>View Users</a></li>
+  <li><a>View Logs</a></li>
+  <li><a>Searh Users</a></li>
+  <li><a>Mini Navigation</a></li>
+  </ul>
+  </li>
+
+  <li class="navigation-sub" id="drop-down-event">
+  <a><i class="zmdi zmdi-notifications"></i>All Stakeholders<a>
+  <ul id="drop-down" class="dropdown-content">
+  <li><a>View Stakeholders</a></li>
+  <li><a>View Stakeholders Locations</a></li>
+  <li><a>Searh Users</a></li>
+  <li><a>Mini Navigation</a></li>
+  </ul>
+  </li>
+  
+
   <li><a><i class="zmdi zmdi-notifications"></i>Invoice Management<a></li>
-  <li><a><i class="zmdi zmdi-apps"></i>VAT Management Services<a></li>
+  <li><a><i class="zmdi zmdi-apps"></i>VAT Management Setting<a></li>
   <li><a><i class="zmdi zmdi-palette"></i>Transporter Service<a></li>
   <li><a><i class="zmdi zmdi-palette"></i>All Settings<a></li>
   <li><a><i class="zmdi zmdi-notifications"></i>Logout<a></li>
@@ -84,13 +119,13 @@
   <!--<form>-->
   <div class="row">
    <div class="col">
-   <div style="background:#ce5844; padding:5px">
+   <div class="card-inside">
    <h1>NAME OF CLASSIFICATION</h1> <p>[Super Administrator user]</p>
    </div>
    </div>
 
    <div class="col">
-   <div style="background:#ce5844; padding:5px">
+   <div class="card-inside">
    <h1>DESCRIPTION</h1> <span>We most of the tenants occupied this property two years ago. Since then, property values similar to ours have been rented in recent months to tenants at a cheaper rate than what we've paid. We've confirmed that a property identical to ours is renting  at most, a </span>
    </div>
    </div>
@@ -105,16 +140,16 @@
     <div class="col-md-5">
     <h1>Roles</h1><br>
       <select id="select-ml" multiple>
-                             <option>Create Stakeholders</option>
-                             <option>View Stakeholders</option>
-                             <option>Edit Stakeholders</option>
-                             <option>Delete Stakeholders</option>
-                             <option>Create System Users</option>
-                             <option>View System Users</option>
-                             <option>Edit System Users</option>
-                             <option>Delete System Users</option>
-                             <option>Create Roles</option>
-                             </select>
+       <option>Create Stakeholders</option>
+       <option>View Stakeholders</option>
+       <option>Edit Stakeholders</option>
+       <option>Delete Stakeholders</option>
+       <option>Create System Users</option>
+       <option>View System Users</option>
+       <option>Edit System Users</option>
+       <option>Delete System Users</option>
+       <option>Create Roles</option>
+      </select>
     </div>
      </div>
     <br>
@@ -149,99 +184,24 @@
       </div>
     </div>
 
-    </section>
+    </section> 
 
-            
+   <hr>  
+    <div class="footer">
+      <ul>
+        <li class="footer-logo">
+         <img src="assets/images/rdcLogoDesign.png"/>
+        </li>
+        <li>Designed by RDC |</li> 
+        <li>© 2018</li>
+      </ul>
+    </div> 
+
    </div>
                    
-
   </div>
-
- 
 </div>
 
 <script src="app.js"></script>
-<script>
-     const leftRoles = document.getElementById('select-ml');
-     const rightRoles = document.getElementById('select-ms');
-     const btnAddRole = document.getElementById("btn-add-role");
-     const btnRemoveRole = document.getElementById("btn-remove-role");
-            
-     function onSelectAll(){
-       //console.log(selectedRoles.options);
-     }
-     onSelectAll();
-
-            let leftSide = [];
-            let rightSide = [];
-            let leftArray = [];
-            let rightArray = [];
-             
-            
-            btnAddRole.addEventListener("click", function(e){
-              addToRight();
-            });
-
-            btnRemoveRole.addEventListener("click", function(){
-              addToLeft();
-            });
-
-
-            leftRoles.onclick = function(e){
-
-              if(e.target.selected){
-                  if(!leftArray.includes(e.target)){
-                    let obj = {};
-                    obj.index = leftRoles.selectedIndex;
-                    obj.option = e.target;
-                    leftArray.push(obj);
-                    console.log(leftArray)
-                  } 
-                  
-              }else{
-                  leftArray.splice(leftRoles.selectedIndex,1);
-              }
-            }
-
-            rightRoles.onclick = function(e){
-    
-              if(e.target.selected){
-                  let obj = {};
-                    obj.index = rightRoles.selectedIndex;
-                    obj.option = e.target;
-                    rightArray.push(obj);
-                
-              }else{
-                   rightArray.splice(rightRoles.selectedIndex,1);
-              }
-
-            }
-            
-
-            function addToRight(){
-             
-              for(let i = 0; i < leftArray.length; i++){
-                let index = leftArray[i].index;
-                let exOption = leftArray[i].option;
-                rightRoles.add(exOption, rightRoles[index]);
-              }
-              leftArray = [];
-            }
-
-            function addToLeft(){
-              
-              for(let i = 0; i < rightArray.length; i++){
-                let index = rightArray[i].index;
-                console.log("This is index " + index);
-                let exOption = rightArray[i].option;
-                leftRoles.add(exOption, leftRoles[index]);
-              }
-              rightArray = [];
-              
-            }
-            
-            
-         
-</script>  
 </body>
 </html>  

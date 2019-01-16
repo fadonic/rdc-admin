@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link  rel="stylesheet" href="assets/css/bootstrap.min.css" />
+ <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"> -->
+  <link rel="stylesheet" href="assets/css/app.css" type="text/css">
+  <link rel="stylesheet" href="assets/css/animate.css" type="text/css">
+ 
+
+ <title>RDC-ADMIN</title>
+</head>
+<body>
+
+<div class="page-loader">
+  <header id="header">
+  <div class="logo">
+  <ul>
+  <li><a id="drop-down-mini" class="actions-item  zmdi zmdi-menu"></a></li>
+  <li>RDC ADMIN</li>
+  </ul>
+  </div>
+
+  <div class="top-nav">
+  <!--<ul>
+  <li> <i class="zmdi zmdi-flower-alt"></i></li>
+  <li> <i class="zmdi zmdi-palette"></i></li>
+  <li> <i class="zmdi zmdi-apps"></i></li>
+  <li> <i class="zmdi zmdi-notifications"></i></li>
+  <li> <i class="zmdi zmdi-more-vert"></i></li>
+  </ul>-->
+  </div>
+  <div id="live-time" class="clock">
+  </div>
+  </header>
+
+  <div id="main-wrapper">
+
+  <aside class="sidebar animated slideInLeft delay-3s" id="sidebar">
+  <ul class="navigation">
+  
+  <li><a><i class="zmdi zmdi-flower-alt"></i>Dashboard<a></li>
+  <li><a><i class="zmdi zmdi-apps"></i>Stakeholders<a></li>
+
+  <li class="navigation-sub" id="drop-down-event">
+  <a><i class="zmdi zmdi-notifications"></i>View System Users<a>
+  <ul id="drop-down" class="dropdown-content">
+  <li><a>Profile details</a></li>
+  <li><a>Logs</a></li>
+  <li><a>Mini Navigation</a></li>
+  <li><a>View System Users</a></li>
+  </ul>
+  </li>
+
+  <li class="navigation-sub" id="drop-down-event">
+  <a><i class="zmdi zmdi-notifications"></i>Users Management<a>
+  <ul id="drop-down" class="dropdown-content">
+  <li><a>Create User Classifications</a></li>
+  <li><a>View Users Classifications</a></li>
+  <li><a>Create system Users</a></li>
+  <li><a>View System Users</a></li>
+  </ul>
+  </li>
+
+  <li class="navigation-sub" id="drop-down-event">
+  <a><i class="zmdi zmdi-notifications"></i>All System Users<a>
+  <ul id="drop-down" class="dropdown-content">
+  <li><a>View Users</a></li>
+  <li><a>View Logs</a></li>
+  <li><a>Searh Users</a></li>
+  <li><a>Mini Navigation</a></li>
+  </ul>
+  </li>
+
+  <li class="navigation-sub" id="drop-down-event">
+  <a><i class="zmdi zmdi-notifications"></i>All Stakeholders<a>
+  <ul id="drop-down" class="dropdown-content">
+  <li><a>View Stakeholders</a></li>
+  <li><a>View Stakeholders Locations</a></li>
+  <li><a>Searh Users</a></li>
+  <li><a>Mini Navigation</a></li>
+  </ul>
+  </li>
+  
+
+  <li><a><i class="zmdi zmdi-notifications"></i>Invoice Management<a></li>
+  <li><a><i class="zmdi zmdi-apps"></i>VAT Management Setting<a></li>
+  <li><a><i class="zmdi zmdi-palette"></i>Transporter Service<a></li>
+  <li><a><i class="zmdi zmdi-palette"></i>All Settings<a></li>
+  <li><a><i class="zmdi zmdi-notifications"></i>Logout<a></li>
+  <li><a><i class="zmdi zmdi-apps"></i>Rtn generator<a></li>
+  <li><a><i class="zmdi zmdi-apps"></i>Stakeholders<a></li>
+  <li><a><i class="zmdi zmdi-notifications"></i>Users Settings<a></li>
+  
+  </ul>
+  </aside>
+
+   <div class="main-content">
+   <header class="content-title">
+   <h1 class="animated bounceInUp delay-2s">Welcome [Osama RockStar]</h1>
+   
+   <div class="actions">
+   <!--<a class="actions-item zmdi zmdi-trending-up"></a>
+   <a class="actions-item zmdi zmdi-trending-up"></a>
+   <a class="actions-item zmdi zmdi-more-vert"></a> 
+   -->
+   </div>
+
+   <style type="text/css">
+     
+    .testimg{
+      text-align: right; 
+      margin-top: 70px;
+      margin-bottom: 3px;
+      max-width: 90px;
+      max-height: 90px;
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+    }
+
+    .testimg img{
+      height: auto;
+      width: 100%;
+    }
+
+   </style>
+
+   </header>
+ 
+   <section>
+    <div class="row">
+    
+     <div class="col-md-10" id="btn">
+       <div id="card" class="card override animated rotateInUpLeft delay-3s" style="padding: 10px; background-color:transparent; border:none;">
+
+      <p class="animated bounceInUp delay-4s" id="t" style="padding: 20px; background-color:rgba(0,0,0,0.18); color:rgba(255,255,255,0.8); border-top-right-radius: 50px;">
+        </p>
+
+      <p style="padding: 20px; background-color:rgba(0,0,0,0.5);border-bottom-left-radius: 50px; ">your user experience. We also collect anonymous analytical data, as described in our Privacy policy.We use cookies on our website to support technical features that enhance your user experience. We also collect your user experience</p>
+      
+       </div>
+      </div>
+    </div>
+   </section>
+
+  <!--  <section>
+      <div class="row">
+    
+      <div class="col-md-10" id="btn" style="padding: 30px">
+        <div class="row">
+        <div class="col-md-4" id="btn">
+              <div class="card override">
+                  <h1>Rtn generator logs</h1>
+                  <p>764,9003</p> 
+                  </div>
+        </div> 
+
+        <div class="col-md-4" id="btn">
+              <div class="card override">
+                  <h1>Rtn generator logs</h1>
+                  <p>764,9003</p> 
+                  </div>
+        </div> 
+
+        <div class="col-md-4" id="btn">
+              <div class="card override">
+                  <h1>Rtn generator logs</h1>
+                  <p>764,9003</p> 
+                  </div>
+        </div>                   
+        </div>
+        </div>
+      </div>
+        </section>
+  <hr>
+
+  <section> -->
+                 
+    <hr>    
+       <div class="footer">
+        <ul>
+           <li class="footer-logo">
+            <img src="assets/images/rdcLogoDesign.png"/>
+           </li>
+            <li>Designed by RDC |</li> 
+            <li>© 2018</li>
+          </ul>
+       </div>             
+   </div>
+                   
+  </div>
+</div>
+<script src="app.js"></script> 
+
+<script type="text/javascript">
+  var txt = "We use cookies on our website to support technical features that enhance your user experience. We also collect anonymous analytical data, as described in our Privacy policy. We use cookies on our website to support technical features that enhance. We also collect anonymous analytical data, as described in our ";
+  var i = 0;
+
+  function display(){
+     if(i<txt.length){
+      document.getElementById("t").innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(display, 10);
+     } 
+  }
+
+  display();
+
+  function createBtn(){
+
+  var btn = document.createElement("button");
+  btn.innerHTML = "Quick link to Dashboard";
+  btn.className = "animated slideInDown delay-20s btn btn-light";
+  btn.style.padding = "10px";
+  btn.style.maxWidth = "50%";
+  btn.style.float = "right";
+  btn.style.margin = "auto";
+
+  document.getElementById("card").appendChild(btn);
+  }
+
+  setTimeout(createBtn, 10000);
+
+</script> 
+
+
+</body>
+</html>  

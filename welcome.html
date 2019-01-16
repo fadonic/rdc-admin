@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link  rel="stylesheet" href="assets/css/bootstrap.min.css" />
+ <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"> -->
+  <link rel="stylesheet" href="assets/css/app.css" type="text/css">
+  <link rel="stylesheet" href="assets/css/animate.css" type="text/css">
+
+  <link rel="stylesheet" href="c3-0.6.12/c3.css" type="text/css">
+ 
+
+ <title>RDC-ADMIN</title>
+</head>
+<body>
+
+<div class="page-loader">
+  <header id="header">
+  <div class="logo">
+  <ul>
+  <li><a id="drop-down-mini" class="actions-item  zmdi zmdi-menu"></a></li>
+  <li>RDC ADMIN</li>
+  </ul>
+  </div>
+
+  <div class="top-nav">
+  <!--<ul>
+  <li> <i class="zmdi zmdi-flower-alt"></i></li>
+  <li> <i class="zmdi zmdi-palette"></i></li>
+  <li> <i class="zmdi zmdi-apps"></i></li>
+  <li> <i class="zmdi zmdi-notifications"></i></li>
+  <li> <i class="zmdi zmdi-more-vert"></i></li>
+  </ul>-->
+  </div>
+  <div id="live-time" class="clock">
+  </div>
+  </header>
+
+  <div id="main-wrapper">
+
+  <aside class="sidebar animated slideInLeft delay-3s" id="sidebar">
+  <ul class="navigation">
+  
+  <li><a><i class="zmdi zmdi-flower-alt"></i>Dashboard<a></li>
+  <li><a><i class="zmdi zmdi-apps"></i>Stakeholders<a></li>
+
+  <li class="navigation-sub" id="drop-down-event">
+  <a><i class="zmdi zmdi-notifications"></i>View System Users<a>
+  <ul id="drop-down" class="dropdown-content">
+  <li><a>Profile details</a></li>
+  <li><a>Logs</a></li>
+  <li><a>Mini Navigation</a></li>
+  <li><a>View System Users</a></li>
+  </ul>
+  </li>
+
+  <li class="navigation-sub" id="drop-down-event">
+  <a><i class="zmdi zmdi-notifications"></i>Users Management<a>
+  <ul id="drop-down" class="dropdown-content">
+  <li><a>Create User Classifications</a></li>
+  <li><a>View Users Classifications</a></li>
+  <li><a>Create system Users</a></li>
+  <li><a>View System Users</a></li>
+  </ul>
+  </li>
+
+  <li class="navigation-sub" id="drop-down-event">
+  <a><i class="zmdi zmdi-notifications"></i>All System Users<a>
+  <ul id="drop-down" class="dropdown-content">
+  <li><a>View Users</a></li>
+  <li><a>View Logs</a></li>
+  <li><a>Searh Users</a></li>
+  <li><a>Mini Navigation</a></li>
+  </ul>
+  </li>
+
+  <li class="navigation-sub" id="drop-down-event">
+  <a><i class="zmdi zmdi-notifications"></i>All Stakeholders<a>
+  <ul id="drop-down" class="dropdown-content">
+  <li><a>View Stakeholders</a></li>
+  <li><a>View Stakeholders Locations</a></li>
+  <li><a>Searh Users</a></li>
+  <li><a>Mini Navigation</a></li>
+  </ul>
+  </li>
+  
+
+  <li><a><i class="zmdi zmdi-notifications"></i>Invoice Management<a></li>
+  <li><a><i class="zmdi zmdi-apps"></i>VAT Management Setting<a></li>
+  <li><a><i class="zmdi zmdi-palette"></i>Transporter Service<a></li>
+  <li><a><i class="zmdi zmdi-palette"></i>All Settings<a></li>
+  <li><a><i class="zmdi zmdi-notifications"></i>Logout<a></li>
+  <li><a><i class="zmdi zmdi-apps"></i>Rtn generator<a></li>
+  <li><a><i class="zmdi zmdi-apps"></i>Stakeholders<a></li>
+  <li><a><i class="zmdi zmdi-notifications"></i>Users Settings<a></li>
+  
+  </ul>
+  </aside>
+
+   <div class="main-content">
+   <header class="content-title">
+   <h1 class="animated bounceInUp delay-2s">Welcome [Osama RockStar]</h1>
+   
+   <div class="actions">
+   <!--<a class="actions-item zmdi zmdi-trending-up"></a>
+   <a class="actions-item zmdi zmdi-trending-up"></a>
+   <a class="actions-item zmdi zmdi-more-vert"></a> 
+   -->
+   </div>
+<style type="text/css">
+  .chart-box{
+    background:rgba(0,0,0,0.09); 
+    border:none; border-radius:0; 
+    padding:20px
+  }
+
+  table>thead>tr>th, table>tbody>tr>td{
+     font-weight: 200;
+     padding: 3px;
+     color: rgba(255,255,255, 0.8);
+  }
+
+  table>thead>tr>th{
+  background: rgba(0,0,0,0.1);
+
+  }
+
+  table>tbody>tr:nth-child(even){
+    background: rgba(0,0,0,0.05);
+  }
+
+  .lighter-bg{
+    background:rgba(0,0,0,0.06);
+    border:none;
+  }
+
+  .lighter-bg h1{
+    font-size: 1.04rem;
+    font-weight: 300;
+  }
+  .currency-box{
+    position: fixed;
+    right: -100px;
+    z-index: 100;
+    top: 45%;
+    padding: 10px; 
+    background: rgba(0,0,0, 0.4);
+  }
+
+  .currency-box:hover{
+     right: 0px;
+     transition: ease 1s;
+  }
+
+  .currency-box select{
+    background: #000;
+    padding: 10px;
+    border:1px dotted #fff;
+    color: #fff;
+  }
+
+
+</style>
+   </header>
+
+    
+
+                    <section>
+ 
+   <section>
+    <div class="row">
+
+      <div class="col-md-6" id="btn">
+
+       <div id="card" class="card override chart-box animated fadeInRight delay-4s">
+         <div id="pieChart" style="width:auto; height:210px;">
+         </div>
+       </div>
+      </div>
+    
+     <div class="col-md-6" id="btn">
+
+       <div id="card" class="card override chart-box animated fadeInRight delay-4s">
+         <div id="lineChart" style="width:auto; height:210px;">
+         </div>
+       </div>
+      </div>
+    </div>
+   </section>
+
+    
+   <section>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card override border-radius-none animated fadeInRight delay-4s" style="padding: 0px; background:transparent; border-radius: none; border:none; font-size:12px">
+                <div class="row">
+    
+                            <div class="col-sm-3" id="btn">
+                              <div class="card override border-radius-none lighter-bg" style="padding: 20px;">
+                              <h1>Total Number of Invoices Extracted</h1>
+                              <hr>
+                              <h5>764,9003</h5> 
+                              </div>
+                                   
+                            </div>
+                            <br>
+
+                            <div class="col-sm-3">
+                              <div class="card override border-radius-none lighter-bg" style="padding: 20px">
+                              <h1>Total Number Expected VAT Amount</h1>
+                              <hr>
+                              <h5>764,9003</h5> 
+                              </div>
+
+                            </div>
+                            <br>
+
+                             <div class="col-sm-3">
+                              <div class="card override border-radius-none lighter-bg" style="padding: 20px">
+                              <h1>Total Number paid VAT Amount</h1>
+                              <hr>
+                              <h5>764,9003</h5> 
+                              </div>
+
+                            </div>
+                            <br>
+
+                            <div class="col-sm-3">
+                              <div class="card override border-radius-none lighter-bg" style="padding: 20px">
+                              <h1>Total Number of sub Amount</h1>
+                              <hr>
+                              <h5>764,9003</h5> 
+                              </div>
+
+                            </div>
+
+                            <span class="currency-box">
+                              Currency <select>
+                              <option>Naira</option>
+                              <option>Dollar</option>
+       
+                                </select> 
+                            </span>
+                            
+
+                            <br>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    </section>
+                    
+   
+
+
+    <section>
+    <div class="row">
+
+      <div class="col-md-6" id="btn">
+
+       <div id="card" class="card override chart-box animated fadeInRight delay-4s">
+         <div id="pieChar" style="width:auto; height:230px;">
+       <h1>Stakeholders</h1><br>
+       <select id="select-ml" multiple>
+       <option>Ministry of Information</option>
+       <option>United Bank of Africa</option>
+       <option>Nigeria Port Authority</option>
+       <option>Union Bank of Nigeria</option>
+       <option>Nigeria Port Authority</option>
+       <option>First City Bank</option>
+       <option>Ministry of Information</option>
+       <option>Nigeria Port Authority</option>
+       <option>NIMASA</option>
+      </select>
+    
+
+         </div>
+       </div>
+      </div>
+    
+     <div class="col-md-6" id="btn">
+
+       <div id="card" class="card override chart-box animated fadeInRight delay-4s">
+         <div id="lineChar" style="width:auto; height:210px;">
+          
+               total paid vat amount, expected vat amount , submount
+
+               scrollable table with the list of all the modules, name, stakeholder, location
+               total number of daily errors, time of last access
+         </div>
+       </div>
+
+      </div>
+
+
+    </div>
+   </section>
+
+   <section>
+            <div class="row">
+            <div class="col-md-12 animated fadeInRight delay-4s">
+      <div style="background:rgba(0,0,0,0.2); padding: 7px">
+       All System Modules
+    </div>
+<div class="card override" style="background:rgba(0,0,0,0.09); border:none; border-radius:0; 
+    padding:10px; height: 200px; overflow-y: scroll; ">
+                           <table>
+                           <thead>
+                           <tr>
+                           <th>S/N</th>
+                           <th>Name of Module</th>
+                           <th>Stakeholder</th>
+                           <th>Location</th>
+                           <th>Total no of Error</th>
+                           <th>Last Access</th>
+                           
+                           </tr>
+                           </thead>
+                           <tbody>
+                           <tr>
+                           <td>1</td>
+                           <td>Rtn Generator</td>
+                           <td>Nigeria Port Authority</td>
+                           <td>Lagos Island</td>
+                           <td>899,999</td>
+                           <td>12:23:00</td>
+                           </tr>
+
+                           <tr>
+                           <td>2</td>
+                           <td>Rtn Generator</td>
+                           <td>Nigeria Port Authority</td>
+                           <td>Lagos Island</td>
+                           <td>899,999</td>
+                           <td>12:23:00</td>
+                           </tr>
+
+                           <tr>
+                           <td>3</td>
+                           <td>Rtn Generator</td>
+                           <td>Nigeria Port Authority</td>
+                           <td>Lagos Island</td>
+                           <td>899,999</td>
+                           <td>12:23:00</td>
+                           </tr>
+
+                           <tr>
+                           <td>3</td>
+                           <td>Rtn Generator</td>
+                           <td>Nigeria Port Authority</td>
+                           <td>Lagos Island</td>
+                           <td>899,999</td>
+                           <td>12:23:00</td>
+                           </tr>
+                           <tr>
+                           <td>3</td>
+                           <td>Rtn Generator</td>
+                           <td>Nigeria Port Authority</td>
+                           <td>Lagos Island</td>
+                           <td>899,999</td>
+                           <td>12:23:00</td>
+                           </tr>
+
+                           <tr>
+                           <td>3</td>
+                           <td>Rtn Generator</td>
+                           <td>Nigeria Port Authority</td>
+                           <td>Lagos Island</td>
+                           <td>899,999</td>
+                           <td>12:23:00</td>
+                           </tr>
+                           <tr>
+                           <td>3</td>
+                           <td>Rtn Generator</td>
+                           <td>Nigeria Port Authority</td>
+                           <td>Lagos Island</td>
+                           <td>899,999</td>
+                           <td>12:23:00</td>
+                           </tr>
+                           <tr>
+                           <td>3</td>
+                           <td>Rtn Generator</td>
+                           <td>Nigeria Port Authority</td>
+                           <td>Lagos Island</td>
+                           <td>899,999</td>
+                           <td>12:23:00</td>
+                           </tr>
+                           <tr>
+                           <td>3</td>
+                           <td>Rtn Generator</td>
+                           <td>Nigeria Port Authority</td>
+                           <td>Lagos Island</td>
+                           <td>899,999</td>
+                           <td>12:23:00</td>
+                           </tr>
+                             
+                           <tbody>
+                           </table>  
+                            
+                         </div>
+                        </div>
+                        </div>
+                    </section>
+               
+    <hr>    
+       <div class="footer">
+        <ul>
+           <li class="footer-logo">
+            <img src="assets/images/rdcLogoDesign.png"/>
+           </li>
+            <li>Designed by RDC |</li> 
+            <li>C 2019</li>
+          </ul>
+       </div>             
+   </div>
+                   
+  </div>
+</div>
+<script src="app.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
+<script src="c3-0.6.12/c3.js"></script>
+<script src="assets/js/land-cht.js"></script> 
+
+
+
+</body>
+</html>  

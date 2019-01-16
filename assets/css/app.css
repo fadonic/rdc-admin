@@ -6,7 +6,8 @@ html{
 body{
   color: #fff;
   margin: 0;
-  background-image: url("../images/bgimg.jpg")
+  background-image: url("../images/bgimg.jpg");
+  background: #772036;
 
 }
 
@@ -21,6 +22,7 @@ body{
   position: fixed;
   right: 0;
   left: 0;
+  z-index: 100;
   display: flex;
   height: 70px;
   align-items: center;
@@ -61,7 +63,6 @@ ul{
 
 .top-nav ul li, .logo ul li{
   display: inline-block;
-  padding-right: 40px;
 }
 
 .top-nav ul li>i {
@@ -106,6 +107,9 @@ h1 {
   margin: 0;
   color: #fff;
   text-transform: uppercase;
+}
+.bg-transparent{
+  background-color: transparent;
 }
 
 .content-title .actions {
@@ -194,6 +198,49 @@ h1 {
   display: block;
 }
 
+.dropzone.dz-clickable {
+    cursor: pointer;
+}
+.dropzone {
+    border: 0;
+    background-color: rgba(0,0,0,.2);
+    border-radius: 2px;
+    transition: border-color .3s,background-color .3s;
+    min-height: 50px;
+    position: relative;
+}
+.dropzone {
+    min-height: 150px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    background: white;
+    padding: 20px 20px;
+}
+.dropzone, .dropzone * {
+    box-sizing: border-box;
+}
+
+.dropzone.dz-clickable .dz-message, .dropzone.dz-clickable .dz-message * {
+    cursor: pointer;
+}
+.dropzone .dz-message, .dropzone:before, .notes__actions {
+    transition: opacity .3s;
+}
+.dropzone .dz-message {
+    text-align: center;
+    margin: 2em 0;
+}
+
+.dropzone .dz-message span {
+    display: inline-block;
+    border-radius: 2px;
+    transition: color .3s,box-shadow,.3s;
+    padding: .5rem 1.4rem .8rem;
+    background-color: rgba(255,255,255,.08);
+}
+.dropzone .dz-message span, .dropzone:hover .dz-message span {
+    color: rgba(255,255,255,.85);
+}
+
 button,
 input,
 optgroup,
@@ -210,6 +257,266 @@ textarea {
   margin: 0;
   font-size: inherit;
   line-height: inherit;
+}
+
+input:placeholder{
+  color: red!important;
+}
+input:-moz-placeholder{
+  color: red!important;
+}
+input:-webkit-input-placeholder{
+  color: red!important;
+}
+
+.select:before {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+    right: 10px;
+    bottom: 0px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 8px 8px;
+    border-color: transparent transparent #d1d1d1;
+}
+
+select.form-control-lg:not([size]):not([multiple]) {
+    height: calc(2.875rem + 2px);
+    background-color: transparent;
+}
+
+.active {
+  background-color: #666;
+  color: white;
+}
+
+
+/* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select {
+     display:block; 
+     width: 100%;
+     height:auto; 
+     padding: 0; 
+     line-height: 1.5; 
+     color: #495057; 
+     vertical-align: middle; 
+     background-size: 8px 10px; 
+      
+     border-radius: 0rem; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  /*background-color:rgba(0,0,0, 0.125);*/
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  bottom: 4px;
+  right: 0px;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 4px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+  color: #aaa;
+  padding: 8px 0px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+.select-items div{
+ border-bottom: 1px solid rgba(0,0,0, 0.7);
+ padding: 8px 10px;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color:rgba(0,0,0,1);
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color:#ce5844;
+  color: #eee;
+
+}
+
+.widget-profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1.2rem;
+    border: 5px solid rgba(255,255,255,.1);
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.custom-file-input {
+  color: transparent;
+  opacity: 1;
+}
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: 'Select some files';
+  color: rgba(255,255,255, 0.5);
+  display: inline-block;
+  background-color: rgba(0,0,0,.2);
+  border-radius: 3px;
+  padding: 5px 15px;
+  padding-bottom:10px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+}
+.custom-file-input:hover::before {
+  border-color: black;
+}
+.custom-file-input:active {
+  outline: 0;
+}
+.custom-file-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
+}
+
+#imgText{
+  position: absolute;
+  top: 5px;
+  left: 170px;
+  color: rgba(255,255,255, 0.5)
+}
+
+.mb-10{
+  margin-bottom: 10px;
+}
+
+.card-title:last-child {
+    margin-bottom: 0;
+}
+.card-title {
+    font-size: 1.25rem;
+    line-height: 140%;
+    margin-top: -5px;
+}
+
+.widget-profile-list .media {
+    padding: 0.5rem 2rem;
+    background-color: rgba(0,0,0,.12);
+    margin-bottom: 2px;
+}
+.media {
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+.media, .progress {
+    display: -webkit-box;
+    display: -ms-flexbox;
+}
+
+.avatar-char {
+    line-height: 2.9rem;
+    font-size: 1.2rem;
+    text-align: center;
+    font-style: normal;
+}
+.avatar-char, .avatar-img {
+    border-radius: 2px;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1.2rem;
+}
+.actions-item.show, .actions-item:hover, .avatar-char {
+    color: #fff;
+    background-color: rgba(255,255,255,.08);
+}
+.avatar-char, .card-link, .contacts-btn, .content-title:not(.content-title--alt)>h1, .fc th, .listview-header, .modal-footer>.btn-link, .price-table__action, .price-table__title, .q-a__stat>span>small, .view-more {
+    text-transform: uppercase;
+}
+
+.media-body {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.widget-profile-list .media-body strong {
+    font-weight: 600;
+}
+
+.widget-profile-list .media-body small {
+    color: rgba(255,255,255,.7);
+    font-size: .92rem;
+}
+.small, small {
+    font-size: 80%;
+    font-weight: 400;
+}
+
+
+.input-group-addon {
+    padding: 0 1rem!important;
+}
+.input-group-addon {
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.25;
+    color: rgba(255,255,255,.85);
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 0;
+}
+
+.input-group-addon, .input-group-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 [role=button],
@@ -229,6 +536,54 @@ button,
 hr,
 input {
   overflow: visible;
+}
+
+.search {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin-right: 2.5rem;
+    position: relative;
+}
+.search-inner {
+    position: relative;
+}
+
+.search-text {
+    background-color: rgba(255,255,255,.08);
+    color: rgba(255,255,255,.85);
+}
+.search-text {
+    border: 0;
+    border-radius: 2px;
+    height: 2.9rem;
+    padding-left: 3rem;
+    width: 100%;
+    transition: background-color .3s,color .3s;
+}
+
+a{
+  text-decoration: none;
+  color: #eee;
+}
+a:hover{
+  text-decoration: none;
+  color: #fff;
+}
+
+.search-helper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.3rem;
+    height: 100%;
+    width: 3rem;
+    text-align: center;
+    line-height: 2.9rem;
+    cursor: pointer;
+    transition: color .3s,-webkit-transform .4s;
+    transition: color .3s,transform .4s;
+    transition: color .3s,transform .4s,-webkit-transform .4s;
 }
 
 .form-control:focus {
@@ -288,7 +643,7 @@ input {
   position: absolute;
   display: none;
 }
-select{
+#select-ml, #select-ms{
   min-width:100%;
   height: 200px;
   padding:15px;
@@ -298,13 +653,13 @@ select{
   color:#ddd;
   font-size: 0.95rem;
 }
-select:focus{
+#select-ml:focus, #select-ms:focus{
   outline: none;
   background:transparent;
 }
 
 
-select > option{
+#select-ml>option, #select-ms>option{
   padding:10px;
 }
 
@@ -330,6 +685,12 @@ select > option{
   transform: rotate(45deg);
 }
 
+.card-inside{
+  background:#ce5844;
+  background:#691930;
+  padding:5px;
+}
+
 .classification-header{
 background:#ce5844;
 padding:12px 20px;
@@ -337,7 +698,6 @@ padding:12px 20px;
 
 .classification-list{
   height: 200px;
-  z-index: 101;
   background-color: rgba(0, 0, 0, .25);
   font-weight: 600;
   /*border-top: 2px solid rgba(0, 0, 0, .25);*/
@@ -356,7 +716,9 @@ padding:12px 20px;
   font-weight:600;
 }
 
-
+.mb-20{
+  margin-bottom: 20px;
+}
 
 .sidebar {
   width: 250px;
@@ -517,6 +879,17 @@ hr {
   border-radius: 2px;
   padding:10px;
   margin-bottom: 30px;
+}
+
+.override-light{
+  /*background-color: rgba(0, 0, 0, .4);*/
+  /*box-shadow:none;*/
+  /*background-color: rgba(0, 0, 0, .2);*/
+  background-color: rgba(0, 0, 0, .01);
+  border-radius: 2px;
+  padding:10px;
+  margin-bottom: 30px;
+  border:0px;
 }
 
 .quick-stats-info{
